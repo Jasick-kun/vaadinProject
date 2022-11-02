@@ -23,6 +23,7 @@ public class MainView extends AppLayout {
 
 
     public MainView() {
+
         DrawerToggle toggle = new DrawerToggle();
 
         H1 title = new H1("MyApp");
