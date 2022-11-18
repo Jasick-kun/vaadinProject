@@ -25,6 +25,9 @@ public class AnimeLayout extends VerticalLayout {
         grid.addColumn(Anime::getCountOfEpisodes).setHeader("count of episodes");
         grid.addColumn(Anime::getYearOfIssue).setHeader("year of issue");
 
+
+
+
         List<Anime> anime = new ArrayList<>();
         animeRepository.findAll().forEach(anime::add);
         grid.setItems(anime);

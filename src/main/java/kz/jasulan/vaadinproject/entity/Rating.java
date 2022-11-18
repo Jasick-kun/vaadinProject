@@ -21,7 +21,7 @@ public class Rating {
 
     @ManyToOne
     @JoinColumn(name = "user_id")
-    private Anime user;
+    private User user;
 
     private Integer rate;
 }
