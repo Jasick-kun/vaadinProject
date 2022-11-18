@@ -11,11 +11,11 @@ import javax.annotation.security.PermitAll;
 import java.util.ArrayList;
 import java.util.List;
 
-@Route(value = "anime",layout = MainView.class)
+@Route(value = "anime", layout = MainView.class)
 @PermitAll
 public class AnimeLayout extends VerticalLayout {
 
-    public AnimeLayout( AnimeRepository animeRepository) {
+    public AnimeLayout(AnimeRepository animeRepository) {
         Grid<Anime> grid = new Grid<>(Anime.class, false);
         grid.addColumn(Anime::getId).setHeader("id");
         grid.addColumn(Anime::getName).setHeader("name");
@@ -24,9 +24,6 @@ public class AnimeLayout extends VerticalLayout {
         grid.addColumn(Anime::getRating).setHeader("rating");
         grid.addColumn(Anime::getCountOfEpisodes).setHeader("count of episodes");
         grid.addColumn(Anime::getYearOfIssue).setHeader("year of issue");
-
-
-
 
         List<Anime> anime = new ArrayList<>();
         animeRepository.findAll().forEach(anime::add);
